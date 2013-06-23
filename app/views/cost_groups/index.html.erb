@@ -1,0 +1,27 @@
+<h1>Listing cost_groups</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Active</th>
+    <th>SORT</th>
+    <th></th>    
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cost_groups.each do |cost_group| %>
+  <tr>
+    <td><%= cost_group.name %></td>
+    <td><%= cost_group.active %></td>
+        <td><%= cost_group.SORT %></td>
+    <td><%= link_to 'Show', cost_group %></td>
+    <td><%= link_to 'Edit', edit_cost_group_path(cost_group) %></td>
+    <td><%= link_to 'Destroy', cost_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cost group', new_cost_group_path %>

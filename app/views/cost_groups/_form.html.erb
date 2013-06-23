@@ -1,0 +1,31 @@
+<%= form_for(@cost_group) do |f| %>
+  <% if @cost_group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cost_group.errors.count, "error") %> prohibited this cost_group from being saved:</h2>
+
+      <ul>
+      <% @cost_group.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :SORT %><br />
+    <%= f.text_field :SORT %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :active %><br />
+    <%= f.check_box :active %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

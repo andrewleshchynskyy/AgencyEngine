@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @cost_group.name %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%= @cost_group.active %>
+</p>
+
+
+<p>
+  <b>SORT:</b>
+  <%= @cost_group.SORT %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_cost_group_path(@cost_group) %> |
+<%= link_to 'Back', cost_groups_path %>
